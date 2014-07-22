@@ -27,12 +27,12 @@ module Glass
     end
 
     def serialize
-      hash = {action: action}
-      hash.merge!({id: id,
-                   removeWhenSelected: remove_when_selected,
-                   values: [{ displayName: display_name, 
-                              iconUrl: icon_url}]}) if action == "CUSTOM"
-      hash
+      { action: action,
+        id: id,
+        removeWhenSelected: remove_when_selected,
+        values: [{ displayName: display_name,
+                   iconUrl: icon_url }]
+      }
     end
   end
 end
